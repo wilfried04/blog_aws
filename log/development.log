@@ -1,0 +1,38 @@
+DEPRECATION WARNING: #fog_provider is deprecated and has no effect (called from block in <main> at /home/wilromeo/achieve_aws/config/initializers/carrierwave.rb:6)
+DEPRECATION WARNING: #fog_provider is deprecated and has no effect (called from block in <main> at /home/wilromeo/achieve_aws/config/initializers/carrierwave.rb:6)
+Started GET "/" for ::1 at 2020-11-23 13:12:49 +0100
+Started GET "/" for ::1 at 2020-11-23 13:12:49 +0100
+  [1m[35m (51.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/wilromeo/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+  [1m[35m (51.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/wilromeo/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+Processing by BlogsController#index as HTML
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/application
+  Rendering blogs/index.html.erb within layouts/application
+  [1m[36mBlog Load (43.0ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:15
+  [1m[36mBlog Load (43.7ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:15
+  Rendered blogs/index.html.erb within layouts/application (56.5ms)
+  Rendered blogs/index.html.erb within layouts/application (59.8ms)
+Completed 200 OK in 2416ms (Views: 2349.4ms | ActiveRecord: 48.4ms)
+
+
+Completed 200 OK in 2442ms (Views: 2387.6ms | ActiveRecord: 43.7ms)
+
+
+DEPRECATION WARNING: Single arity template handlers are deprecated. Template handlers must
+now accept two parameters, the view object and the source for the view object.
+Change:
+  >> Coffee::Rails::TemplateHandler.call(template)
+To:
+  >> Coffee::Rails::TemplateHandler.call(template, source)
+ (called from <main> at /home/wilromeo/Bureau/achieve_aws/config/environment.rb:5)
+DEPRECATION WARNING: Single arity template handlers are deprecated. Template handlers must
+now accept two parameters, the view object and the source for the view object.
+Change:
+  >> Coffee::Rails::TemplateHandler.call(template)
+To:
+  >> Coffee::Rails::TemplateHandler.call(template, source)
+ (called from <main> at /home/wilromeo/Bureau/achieve_aws/config/environment.rb:5)
