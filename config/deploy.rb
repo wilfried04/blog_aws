@@ -3,7 +3,7 @@ lock "~> 3.14.1"
 
 
 set :application, 'blog'
-set :repo_url, 'https://github.com/Baroka-wp/blogtest.git' # Edit this to match your repository
+set :repo_url, 'https://github.com/wilfried04/blog_aws.git' # Edit this to match your repository
 set :branch, :master
 set :deploy_to, '/home/deploy/blog'
 set :pty, true
