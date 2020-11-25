@@ -82,4 +82,4 @@ production:
   <<: *default
   database: blog_production
   username: blog
-  password: <%= ENV['ACHIEVE_AWS_DATABASE_PASSWORD'] %>
+  password: blog
