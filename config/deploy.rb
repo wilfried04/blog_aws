@@ -10,7 +10,7 @@ set :linked_files, %w{config/database.yml config/application.yml}
 set :linked_dirs, %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system public/uploads}
 set :keep_releases, 5
 set :rvm_type, :user
-set :rvm_ruby_version, 'ruby-2.7.1'  # Edit this if you are using MRI Ruby
+set :rvm_ruby_version, 'ruby-2.6.5'  # Edit this if you are using MRI Ruby
 
 set :log_level, :info
 namespace :deploy do
@@ -66,18 +66,6 @@ namespace :deploy do
 # Default value for keep_releases is 5
 # set :keep_releases, 5
 
-namespace :deploy do
-
-  after :restart, :clear_cache do
-    on roles(:web), in: :groups, limit: 3, wait: 10 do
-      # Here we can do anything such as:
-      # within release_path do
-      #   execute :rake, 'cache:clear'
-      # end
-    end
-  end
-
-end
 
 
 # Edit this if you are using MRI Ruby

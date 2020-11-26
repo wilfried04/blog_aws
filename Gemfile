@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '2.7.1'
+ruby '2.6.5'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'sassc-rails'
@@ -18,13 +18,12 @@ gem 'dotenv-rails'
 gem 'unicorn'
 gem 'mini_racer'
 gem 'carrierwave'
-gem 'capistrano3-unicorn'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'capistrano'
   gem 'capistrano3-puma'
-  
+  gem 'capistrano3-unicorn'
   gem 'capistrano-rails', require: false
   gem 'capistrano-bundler', require: false
   gem 'capistrano-rvm'
