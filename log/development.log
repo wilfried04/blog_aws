@@ -124,3 +124,73 @@ Migrating to CreateBlogs (20201022092843)
   [1m[35m (35.0ms)[0m  [1m[35mCOMMIT[0m
   [1m[35m (0.6ms)[0m  [1m[34mSELECT pg_advisory_unlock(892336952976185220)[0m
   [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+DEPRECATION WARNING: Single arity template handlers are deprecated. Template handlers must
+now accept two parameters, the view object and the source for the view object.
+Change:
+  >> Coffee::Rails::TemplateHandler.call(template)
+To:
+  >> Coffee::Rails::TemplateHandler.call(template, source)
+ (called from <main> at /home/wilromeo/Bureau/aws_app/config/environment.rb:5)
+DEPRECATION WARNING: #fog_provider is deprecated and has no effect (called from block in <main> at /home/wilromeo/Bureau/aws_app/config/initializers/carrierwave.rb:6)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(892336952976185220)[0m
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(892336952976185220)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+DEPRECATION WARNING: Single arity template handlers are deprecated. Template handlers must
+now accept two parameters, the view object and the source for the view object.
+Change:
+  >> Coffee::Rails::TemplateHandler.call(template)
+To:
+  >> Coffee::Rails::TemplateHandler.call(template, source)
+ (called from <main> at /home/wilromeo/Bureau/aws_app/config/environment.rb:5)
+DEPRECATION WARNING: #fog_provider is deprecated and has no effect (called from block in <main> at /home/wilromeo/Bureau/aws_app/config/initializers/carrierwave.rb:6)
+Started GET "/" for ::1 at 2020-11-26 07:12:52 +0100
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/application
+  [1m[36mBlog Load (0.8ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:15
+  Rendered blogs/index.html.erb within layouts/application (Duration: 88.6ms | Allocations: 1587)
+Completed 200 OK in 869ms (Views: 626.2ms | ActiveRecord: 3.0ms | Allocations: 297674)
+
+
+Started GET "/blogs/new" for ::1 at 2020-11-26 07:12:55 +0100
+Processing by BlogsController#new as HTML
+  Rendering blogs/new.html.erb within layouts/application
+  Rendered blogs/_form.html.erb (Duration: 87.5ms | Allocations: 4560)
+  Rendered blogs/new.html.erb within layouts/application (Duration: 106.4ms | Allocations: 4899)
+Completed 200 OK in 129ms (Views: 121.6ms | ActiveRecord: 2.1ms | Allocations: 21187)
+
+
+Started POST "/blogs" for ::1 at 2020-11-26 07:12:57 +0100
+Processing by BlogsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rm9jKL5Wk1xoK2gRME8jMdZDaFMdbHvBtNxIGERnbs94a/eLnUy2A0reJ54syH2zl/ifzPPj/IsmvTm+WGOxxg==", "blog"=>{"title"=>"", "content"=>""}, "commit"=>"Create Blog"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/blogs_controller.rb:30:in `block in create'
+  [1m[36mBlog Create (0.8ms)[0m  [1m[32mINSERT INTO "blogs" ("title", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", ""], ["content", ""], ["created_at", "2020-11-26 06:12:57.686678"], ["updated_at", "2020-11-26 06:12:57.686678"]]
+  ↳ app/controllers/blogs_controller.rb:30:in `block in create'
+  [1m[35m (85.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/blogs_controller.rb:30:in `block in create'
+Redirected to http://localhost:3000/blogs/1
+Completed 302 Found in 95ms (ActiveRecord: 86.3ms | Allocations: 3360)
+
+
+Started GET "/blogs/1" for ::1 at 2020-11-26 07:12:57 +0100
+Processing by BlogsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBlog Load (0.3ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs" WHERE "blogs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/blogs_controller.rb:67:in `set_blog'
+  Rendering blogs/show.html.erb within layouts/application
+  Rendered blogs/show.html.erb within layouts/application (Duration: 30.3ms | Allocations: 253)
+Completed 200 OK in 58ms (Views: 53.5ms | ActiveRecord: 0.5ms | Allocations: 14850)
+
+
+DEPRECATION WARNING: Single arity template handlers are deprecated. Template handlers must
+now accept two parameters, the view object and the source for the view object.
+Change:
+  >> Coffee::Rails::TemplateHandler.call(template)
+To:
+  >> Coffee::Rails::TemplateHandler.call(template, source)
+ (called from <top (required)> at /home/wilromeo/Bureau/aws_app/config/environment.rb:5)
+DEPRECATION WARNING: #fog_provider is deprecated and has no effect (called from block in <main> at /home/wilromeo/Bureau/aws_app/config/initializers/carrierwave.rb:6)
