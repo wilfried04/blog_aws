@@ -22,11 +22,12 @@ gem 'carrierwave'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
-  gem 'capistrano'
+  gem 'capistrano', '3.6.0'
   gem 'capistrano3-puma'
   gem 'capistrano3-unicorn'
   gem 'capistrano-rails', require: false
   gem 'capistrano-bundler', require: false
+  gem 'capistrano-rbenv'
   gem 'capistrano-rvm'
   gem 'sass-rails', '~> 5.0'
 

@@ -2,15 +2,16 @@
 lock "~> 3.14.1"
 
 set :application, 'blog'
-set :repo_url, 'https://github.com/wilfried04/blog_aws.git' # Edit this to match your repository
+set :repo_url, 'https://github.com/wilfried04/blog_aws' # Edit this to match your repository
 set :branch, :master
 set :deploy_to, '/home/deploy/blog'
 set :pty, true
-set :linked_files, %w{config/database.yml config/application.yml}
+set :linked_files, %w{.env config/database.yml config/application.yml}
 set :linked_dirs, %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system public/uploads}
 set :keep_releases, 5
 set :rvm_type, :user
-set :rvm_ruby_version, 'ruby-2.6.5'  # Edit this if you are using MRI Ruby
+set :rvm_ruby_version, 'ruby-2.6.5' 
+set :rbenv_type, :system # Edit this if you are using MRI Ruby
 
 set :log_level, :info
 namespace :deploy do
