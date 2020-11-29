@@ -2726,3 +2726,250 @@
   INFO [8bc72bb6] Running ~/.rvm/bin/rvm ruby-2.6.5 do bundle config --local without development:test as deploy@54.156.57.141
   INFO [8bc72bb6] Finished in 1.059 seconds with exit status 0 (successful).
   INFO [837c844b] Running ~/.rvm/bin/rvm ruby-2.6.5 do bundle install --jobs 4 --quiet as deploy@54.156.57.141
+  INFO ---------------------------------------------------------------------------
+  INFO START 2020-11-26 12:18:44 +0100 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [6033183a] Running /usr/bin/env mkdir -p /tmp as deploy@54.156.57.141
+  INFO [6033183a] Finished in 3.828 seconds with exit status 0 (successful).
+  INFO Uploading /tmp/git-ssh-blog-production-wilromeo.sh 100.0%
+  INFO [f30c1ce6] Running /usr/bin/env chmod 700 /tmp/git-ssh-blog-production-wilromeo.sh as deploy@54.156.57.141
+  INFO [f30c1ce6] Finished in 0.921 seconds with exit status 0 (successful).
+  INFO [0eee1ef9] Running /usr/bin/env git ls-remote https://github.com/wilfried04/blog_aws.git HEAD as deploy@54.156.57.141
+  INFO [0eee1ef9] Finished in 0.974 seconds with exit status 0 (successful).
+  INFO [cd8b1b1a] Running /usr/bin/env mkdir -p /home/deploy/blog/shared /home/deploy/blog/releases as deploy@54.156.57.141
+  INFO [cd8b1b1a] Finished in 0.611 seconds with exit status 0 (successful).
+  INFO [1bb6074e] Running /usr/bin/env mkdir -p /home/deploy/blog/shared/bin /home/deploy/blog/shared/log /home/deploy/blog/shared/tmp/pids /home/deploy/blog/shared/tmp/cache /home/deploy/blog/shared/tmp/sockets /home/deploy/blog/shared/vendor/bundle /home/deploy/blog/shared/public/system /home/deploy/blog/shared/public/uploads /home/deploy/blog/shared/public/assets as deploy@54.156.57.141
+  INFO [1bb6074e] Finished in 0.918 seconds with exit status 0 (successful).
+  INFO [721fbd28] Running /usr/bin/env mkdir -p /home/deploy/blog/shared/config as deploy@54.156.57.141
+  INFO [721fbd28] Finished in 0.838 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /home/deploy/blog/repo
+  INFO [a7507218] Running /usr/bin/env git remote set-url origin https://github.com/wilfried04/blog_aws.git as deploy@54.156.57.141
+  INFO [a7507218] Finished in 0.921 seconds with exit status 0 (successful).
+  INFO [2fcc1ae6] Running /usr/bin/env git remote update --prune as deploy@54.156.57.141
+  INFO [2fcc1ae6] Finished in 1.035 seconds with exit status 0 (successful).
+  INFO [425282cd] Running /usr/bin/env mkdir -p /home/deploy/blog/releases/20201126111858 as deploy@54.156.57.141
+  INFO [425282cd] Finished in 0.835 seconds with exit status 0 (successful).
+  INFO [feba32f9] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/deploy/blog/releases/20201126111858 as deploy@54.156.57.141
+  INFO [feba32f9] Finished in 1.621 seconds with exit status 0 (successful).
+  INFO [698295ae] Running /usr/bin/env echo "b9993280d46c36e7fc6f2196b0ddf2ee55f82cd4" > REVISION as deploy@54.156.57.141
+  INFO [698295ae] Finished in 1.025 seconds with exit status 0 (successful).
+  INFO [0e97c827] Running /usr/bin/env mkdir -p /home/deploy/blog/releases/20201126111858/config as deploy@54.156.57.141
+  INFO [0e97c827] Finished in 0.816 seconds with exit status 0 (successful).
+  INFO [5422287f] Running /usr/bin/env rm /home/deploy/blog/releases/20201126111858/config/database.yml as deploy@54.156.57.141
+  INFO [5422287f] Finished in 0.819 seconds with exit status 0 (successful).
+  INFO [4b27c831] Running /usr/bin/env ln -s /home/deploy/blog/shared/config/database.yml /home/deploy/blog/releases/20201126111858/config/database.yml as deploy@54.156.57.141
+  INFO [4b27c831] Finished in 0.774 seconds with exit status 0 (successful).
+  INFO [385fa038] Running /usr/bin/env ln -s /home/deploy/blog/shared/config/application.yml /home/deploy/blog/releases/20201126111858/config/application.yml as deploy@54.156.57.141
+  INFO [385fa038] Finished in 0.837 seconds with exit status 0 (successful).
+  INFO [eef2b766] Running /usr/bin/env mkdir -p /home/deploy/blog/releases/20201126111858 /home/deploy/blog/releases/20201126111858/tmp /home/deploy/blog/releases/20201126111858/vendor /home/deploy/blog/releases/20201126111858/public as deploy@54.156.57.141
+  INFO [eef2b766] Finished in 0.900 seconds with exit status 0 (successful).
+  INFO [84492e1a] Running /usr/bin/env rm -rf /home/deploy/blog/releases/20201126111858/bin as deploy@54.156.57.141
+  INFO [84492e1a] Finished in 0.754 seconds with exit status 0 (successful).
+  INFO [1faa1690] Running /usr/bin/env ln -s /home/deploy/blog/shared/bin /home/deploy/blog/releases/20201126111858/bin as deploy@54.156.57.141
+  INFO [1faa1690] Finished in 0.883 seconds with exit status 0 (successful).
+  INFO [8f769a66] Running /usr/bin/env rm -rf /home/deploy/blog/releases/20201126111858/log as deploy@54.156.57.141
+  INFO [8f769a66] Finished in 0.844 seconds with exit status 0 (successful).
+  INFO [354dd736] Running /usr/bin/env ln -s /home/deploy/blog/shared/log /home/deploy/blog/releases/20201126111858/log as deploy@54.156.57.141
+  INFO [354dd736] Finished in 0.895 seconds with exit status 0 (successful).
+  INFO [b41f576f] Running /usr/bin/env ln -s /home/deploy/blog/shared/tmp/pids /home/deploy/blog/releases/20201126111858/tmp/pids as deploy@54.156.57.141
+  INFO [b41f576f] Finished in 0.922 seconds with exit status 0 (successful).
+  INFO [34676cb8] Running /usr/bin/env rm -rf /home/deploy/blog/releases/20201126111858/tmp/cache as deploy@54.156.57.141
+  INFO [34676cb8] Finished in 0.838 seconds with exit status 0 (successful).
+  INFO [dc3905ad] Running /usr/bin/env ln -s /home/deploy/blog/shared/tmp/cache /home/deploy/blog/releases/20201126111858/tmp/cache as deploy@54.156.57.141
+  INFO [dc3905ad] Finished in 0.799 seconds with exit status 0 (successful).
+  INFO [e90656a5] Running /usr/bin/env ln -s /home/deploy/blog/shared/tmp/sockets /home/deploy/blog/releases/20201126111858/tmp/sockets as deploy@54.156.57.141
+  INFO [e90656a5] Finished in 1.021 seconds with exit status 0 (successful).
+  INFO [6f256f69] Running /usr/bin/env ln -s /home/deploy/blog/shared/vendor/bundle /home/deploy/blog/releases/20201126111858/vendor/bundle as deploy@54.156.57.141
+  INFO [6f256f69] Finished in 0.890 seconds with exit status 0 (successful).
+  INFO [7dd1d20b] Running /usr/bin/env ln -s /home/deploy/blog/shared/public/system /home/deploy/blog/releases/20201126111858/public/system as deploy@54.156.57.141
+  INFO [7dd1d20b] Finished in 0.795 seconds with exit status 0 (successful).
+  INFO [3d2969b3] Running /usr/bin/env ln -s /home/deploy/blog/shared/public/uploads /home/deploy/blog/releases/20201126111858/public/uploads as deploy@54.156.57.141
+  INFO [3d2969b3] Finished in 0.922 seconds with exit status 0 (successful).
+  INFO [324f64ae] Running /usr/bin/env rm -rf /home/deploy/blog/releases/20201126111858/public/assets as deploy@54.156.57.141
+  INFO [324f64ae] Finished in 0.921 seconds with exit status 0 (successful).
+  INFO [ff333398] Running /usr/bin/env ln -s /home/deploy/blog/shared/public/assets /home/deploy/blog/releases/20201126111858/public/assets as deploy@54.156.57.141
+  INFO [ff333398] Finished in 0.921 seconds with exit status 0 (successful).
+  INFO [6c4d8aee] Running ~/.rvm/bin/rvm ruby-2.6.5 do bundle config --local deployment true as deploy@54.156.57.141
+  INFO [6c4d8aee] Finished in 1.433 seconds with exit status 0 (successful).
+  INFO [ac3278a0] Running ~/.rvm/bin/rvm ruby-2.6.5 do bundle config --local path /home/deploy/blog/shared/bundle as deploy@54.156.57.141
+  INFO [ac3278a0] Finished in 1.433 seconds with exit status 0 (successful).
+  INFO [0c3011d6] Running ~/.rvm/bin/rvm ruby-2.6.5 do bundle config --local without development:test as deploy@54.156.57.141
+  INFO [0c3011d6] Finished in 1.433 seconds with exit status 0 (successful).
+  INFO [fdf3f8db] Running ~/.rvm/bin/rvm ruby-2.6.5 do bundle install --jobs 4 --quiet as deploy@54.156.57.141
+  INFO ---------------------------------------------------------------------------
+  INFO START 2020-11-26 13:21:18 +0100 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [460f15e1] Running /usr/bin/env mkdir -p /tmp as deploy@54.156.57.141
+  INFO ---------------------------------------------------------------------------
+  INFO START 2020-11-26 13:25:08 +0100 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [fcc5b024] Running /usr/bin/env mkdir -p /tmp as deploy@54.156.57.141
+  INFO ---------------------------------------------------------------------------
+  INFO START 2020-11-26 13:30:11 +0100 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [353020db] Running /usr/bin/env mkdir -p /tmp as deploy@54.156.57.141
+  INFO [353020db] Finished in 3.669 seconds with exit status 0 (successful).
+  INFO Uploading /tmp/git-ssh-blog-production-wilromeo.sh 100.0%
+  INFO [2377435b] Running /usr/bin/env chmod 700 /tmp/git-ssh-blog-production-wilromeo.sh as deploy@54.156.57.141
+  INFO [2377435b] Finished in 0.922 seconds with exit status 0 (successful).
+  INFO [cecbc1c3] Running /usr/bin/env git ls-remote https://github.com/wilfried04/blog_aws.git HEAD as deploy@54.156.57.141
+  INFO [cecbc1c3] Finished in 1.028 seconds with exit status 0 (successful).
+  INFO [e3c005d4] Running /usr/bin/env mkdir -p /home/deploy/blog/shared /home/deploy/blog/releases as deploy@54.156.57.141
+  INFO [e3c005d4] Finished in 0.710 seconds with exit status 0 (successful).
+  INFO [ef5dfc77] Running /usr/bin/env mkdir -p /home/deploy/blog/shared/bin /home/deploy/blog/shared/log /home/deploy/blog/shared/tmp/pids /home/deploy/blog/shared/tmp/cache /home/deploy/blog/shared/tmp/sockets /home/deploy/blog/shared/vendor/bundle /home/deploy/blog/shared/public/system /home/deploy/blog/shared/public/uploads /home/deploy/blog/shared/public/assets as deploy@54.156.57.141
+  INFO [ef5dfc77] Finished in 0.919 seconds with exit status 0 (successful).
+  INFO [40858179] Running /usr/bin/env mkdir -p /home/deploy/blog/shared/config as deploy@54.156.57.141
+  INFO [40858179] Finished in 0.818 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /home/deploy/blog/repo
+  INFO [9991d0c2] Running /usr/bin/env git remote set-url origin https://github.com/wilfried04/blog_aws.git as deploy@54.156.57.141
+  INFO [9991d0c2] Finished in 0.922 seconds with exit status 0 (successful).
+  INFO [10ec8c1b] Running /usr/bin/env git remote update --prune as deploy@54.156.57.141
+  INFO [10ec8c1b] Finished in 1.023 seconds with exit status 0 (successful).
+  INFO [4d41f702] Running /usr/bin/env mkdir -p /home/deploy/blog/releases/20201126123025 as deploy@54.156.57.141
+  INFO [4d41f702] Finished in 0.818 seconds with exit status 0 (successful).
+  INFO [e7e62e12] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/deploy/blog/releases/20201126123025 as deploy@54.156.57.141
+  INFO [e7e62e12] Finished in 1.740 seconds with exit status 0 (successful).
+  INFO [d16e2613] Running /usr/bin/env echo "b9993280d46c36e7fc6f2196b0ddf2ee55f82cd4" > REVISION as deploy@54.156.57.141
+  INFO [d16e2613] Finished in 0.821 seconds with exit status 0 (successful).
+  INFO [b9b9f31e] Running /usr/bin/env mkdir -p /home/deploy/blog/releases/20201126123025/config as deploy@54.156.57.141
+  INFO [b9b9f31e] Finished in 0.918 seconds with exit status 0 (successful).
+  INFO [5e05b977] Running /usr/bin/env rm /home/deploy/blog/releases/20201126123025/config/database.yml as deploy@54.156.57.141
+  INFO [5e05b977] Finished in 0.819 seconds with exit status 0 (successful).
+  INFO [5c58c093] Running /usr/bin/env ln -s /home/deploy/blog/shared/config/database.yml /home/deploy/blog/releases/20201126123025/config/database.yml as deploy@54.156.57.141
+  INFO [5c58c093] Finished in 0.920 seconds with exit status 0 (successful).
+  INFO [0b93cd25] Running /usr/bin/env ln -s /home/deploy/blog/shared/config/application.yml /home/deploy/blog/releases/20201126123025/config/application.yml as deploy@54.156.57.141
+  INFO [0b93cd25] Finished in 0.976 seconds with exit status 0 (successful).
+  INFO [4de00669] Running /usr/bin/env mkdir -p /home/deploy/blog/releases/20201126123025 /home/deploy/blog/releases/20201126123025/tmp /home/deploy/blog/releases/20201126123025/vendor /home/deploy/blog/releases/20201126123025/public as deploy@54.156.57.141
+  INFO [4de00669] Finished in 0.892 seconds with exit status 0 (successful).
+  INFO [5653082a] Running /usr/bin/env rm -rf /home/deploy/blog/releases/20201126123025/bin as deploy@54.156.57.141
+  INFO [5653082a] Finished in 0.716 seconds with exit status 0 (successful).
+  INFO [8fac1d64] Running /usr/bin/env ln -s /home/deploy/blog/shared/bin /home/deploy/blog/releases/20201126123025/bin as deploy@54.156.57.141
+  INFO [8fac1d64] Finished in 0.828 seconds with exit status 0 (successful).
+  INFO [f104d674] Running /usr/bin/env rm -rf /home/deploy/blog/releases/20201126123025/log as deploy@54.156.57.141
+  INFO [f104d674] Finished in 0.921 seconds with exit status 0 (successful).
+  INFO [a72655c4] Running /usr/bin/env ln -s /home/deploy/blog/shared/log /home/deploy/blog/releases/20201126123025/log as deploy@54.156.57.141
+  INFO [a72655c4] Finished in 0.818 seconds with exit status 0 (successful).
+  INFO [811e03ba] Running /usr/bin/env ln -s /home/deploy/blog/shared/tmp/pids /home/deploy/blog/releases/20201126123025/tmp/pids as deploy@54.156.57.141
+  INFO [811e03ba] Finished in 0.799 seconds with exit status 0 (successful).
+  INFO [31e5db3f] Running /usr/bin/env rm -rf /home/deploy/blog/releases/20201126123025/tmp/cache as deploy@54.156.57.141
+  INFO [31e5db3f] Finished in 0.711 seconds with exit status 0 (successful).
+  INFO [44934c70] Running /usr/bin/env ln -s /home/deploy/blog/shared/tmp/cache /home/deploy/blog/releases/20201126123025/tmp/cache as deploy@54.156.57.141
+  INFO [44934c70] Finished in 0.716 seconds with exit status 0 (successful).
+  INFO [aa8b417e] Running /usr/bin/env ln -s /home/deploy/blog/shared/tmp/sockets /home/deploy/blog/releases/20201126123025/tmp/sockets as deploy@54.156.57.141
+  INFO [aa8b417e] Finished in 0.920 seconds with exit status 0 (successful).
+  INFO [784643fd] Running /usr/bin/env ln -s /home/deploy/blog/shared/vendor/bundle /home/deploy/blog/releases/20201126123025/vendor/bundle as deploy@54.156.57.141
+  INFO [784643fd] Finished in 0.921 seconds with exit status 0 (successful).
+  INFO [f167756d] Running /usr/bin/env ln -s /home/deploy/blog/shared/public/system /home/deploy/blog/releases/20201126123025/public/system as deploy@54.156.57.141
+  INFO [f167756d] Finished in 0.817 seconds with exit status 0 (successful).
+  INFO [27ad9da3] Running /usr/bin/env ln -s /home/deploy/blog/shared/public/uploads /home/deploy/blog/releases/20201126123025/public/uploads as deploy@54.156.57.141
+  INFO [27ad9da3] Finished in 0.921 seconds with exit status 0 (successful).
+  INFO [ab3ce124] Running /usr/bin/env rm -rf /home/deploy/blog/releases/20201126123025/public/assets as deploy@54.156.57.141
+  INFO [ab3ce124] Finished in 0.921 seconds with exit status 0 (successful).
+  INFO [cda7ba0e] Running /usr/bin/env ln -s /home/deploy/blog/shared/public/assets /home/deploy/blog/releases/20201126123025/public/assets as deploy@54.156.57.141
+  INFO [cda7ba0e] Finished in 0.921 seconds with exit status 0 (successful).
+  INFO [951bfc0e] Running ~/.rvm/bin/rvm ruby-2.6.5 do bundle config --local deployment true as deploy@54.156.57.141
+  INFO [951bfc0e] Finished in 1.945 seconds with exit status 0 (successful).
+  INFO [8f2fea4b] Running ~/.rvm/bin/rvm ruby-2.6.5 do bundle config --local path /home/deploy/blog/shared/bundle as deploy@54.156.57.141
+  INFO [8f2fea4b] Finished in 1.330 seconds with exit status 0 (successful).
+  INFO [7ee35b2b] Running ~/.rvm/bin/rvm ruby-2.6.5 do bundle config --local without development:test as deploy@54.156.57.141
+  INFO [7ee35b2b] Finished in 1.376 seconds with exit status 0 (successful).
+  INFO [d26fc0ce] Running ~/.rvm/bin/rvm ruby-2.6.5 do bundle install --jobs 4 --quiet as deploy@54.156.57.141
+  INFO [d26fc0ce] Finished in 167.525 seconds with exit status 0 (successful).
+  INFO [9103a4f1] Running ~/.rvm/bin/rvm ruby-2.6.5 do bundle exec rake assets:precompile as deploy@54.156.57.141
+  INFO [9103a4f1] Finished in 9.624 seconds with exit status 0 (successful).
+  INFO [f40ad919] Running /usr/bin/env mkdir -p /home/deploy/blog/releases/20201126123025/assets_manifest_backup as deploy@54.156.57.141
+  INFO [f40ad919] Finished in 0.763 seconds with exit status 0 (successful).
+  INFO [741c7a8f] Running /usr/bin/env cp /home/deploy/blog/releases/20201126123025/public/assets/.sprockets-manifest-eb65b7ffc4423c5240c2f7d105fedb2d.json /home/deploy/blog/releases/20201126123025/assets_manifest_backup as deploy@54.156.57.141
+  INFO [741c7a8f] Finished in 0.913 seconds with exit status 0 (successful).
+  INFO [deploy:migrate] Run `rake db:migrate`
+  INFO [6988b37a] Running ~/.rvm/bin/rvm ruby-2.6.5 do bundle exec rake db:migrate as deploy@54.156.57.141
+  INFO [6988b37a] Finished in 2.866 seconds with exit status 0 (successful).
+  INFO [1b2c98e6] Running /usr/bin/env ln -s /home/deploy/blog/releases/20201126123025 /home/deploy/blog/releases/current as deploy@54.156.57.141
+  INFO [1b2c98e6] Finished in 1.023 seconds with exit status 0 (successful).
+  INFO [7160167e] Running /usr/bin/env mv /home/deploy/blog/releases/current /home/deploy/blog as deploy@54.156.57.141
+  INFO [7160167e] Finished in 0.819 seconds with exit status 0 (successful).
+  INFO [8a52093d] Running ~/.rvm/bin/rvm ruby-2.6.5 do bundle exec unicorn -c /home/deploy/blog/current/config/unicorn/production.rb -E deployment -D  as deploy@54.156.57.141
+  INFO ---------------------------------------------------------------------------
+  INFO START 2020-11-26 14:45:01 +0100 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [05f33ac6] Running /usr/bin/env mkdir -p /tmp as deploy@54.156.57.141
+  INFO [05f33ac6] Finished in 3.428 seconds with exit status 0 (successful).
+  INFO Uploading /tmp/git-ssh-blog-production-wilromeo.sh 100.0%
+  INFO [4dfa027b] Running /usr/bin/env chmod 700 /tmp/git-ssh-blog-production-wilromeo.sh as deploy@54.156.57.141
+  INFO [4dfa027b] Finished in 0.645 seconds with exit status 0 (successful).
+  INFO [c5159503] Running /usr/bin/env git ls-remote https://github.com/wilfried04/blog_aws.git HEAD as deploy@54.156.57.141
+  INFO [c5159503] Finished in 1.200 seconds with exit status 0 (successful).
+  INFO [3ab7ce72] Running /usr/bin/env mkdir -p /home/deploy/blog/shared /home/deploy/blog/releases as deploy@54.156.57.141
+  INFO [3ab7ce72] Finished in 2.172 seconds with exit status 0 (successful).
+  INFO [744f550a] Running /usr/bin/env mkdir -p /home/deploy/blog/shared/bin /home/deploy/blog/shared/log /home/deploy/blog/shared/tmp/pids /home/deploy/blog/shared/tmp/cache /home/deploy/blog/shared/tmp/sockets /home/deploy/blog/shared/vendor/bundle /home/deploy/blog/shared/public/system /home/deploy/blog/shared/public/uploads /home/deploy/blog/shared/public/assets as deploy@54.156.57.141
+  INFO [744f550a] Finished in 0.953 seconds with exit status 0 (successful).
+  INFO [e600041e] Running /usr/bin/env mkdir -p /home/deploy/blog/shared/config as deploy@54.156.57.141
+  INFO [e600041e] Finished in 2.210 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /home/deploy/blog/repo
+  INFO [578af813] Running /usr/bin/env git remote set-url origin https://github.com/wilfried04/blog_aws.git as deploy@54.156.57.141
+  INFO [578af813] Finished in 0.699 seconds with exit status 0 (successful).
+  INFO [b8e80c72] Running /usr/bin/env git remote update --prune as deploy@54.156.57.141
+  INFO [b8e80c72] Finished in 0.816 seconds with exit status 0 (successful).
+  INFO [367b8467] Running /usr/bin/env mkdir -p /home/deploy/blog/releases/20201126134516 as deploy@54.156.57.141
+  INFO [367b8467] Finished in 0.925 seconds with exit status 0 (successful).
+  INFO [2eff2389] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/deploy/blog/releases/20201126134516 as deploy@54.156.57.141
+  INFO [2eff2389] Finished in 1.447 seconds with exit status 0 (successful).
+  INFO [2e578c94] Running /usr/bin/env echo "b9993280d46c36e7fc6f2196b0ddf2ee55f82cd4" > REVISION as deploy@54.156.57.141
+  INFO [2e578c94] Finished in 1.840 seconds with exit status 0 (successful).
+  INFO [78fbb218] Running /usr/bin/env mkdir -p /home/deploy/blog/releases/20201126134516/config as deploy@54.156.57.141
+  INFO [78fbb218] Finished in 0.906 seconds with exit status 0 (successful).
+  INFO [1a48b97c] Running /usr/bin/env rm /home/deploy/blog/releases/20201126134516/config/database.yml as deploy@54.156.57.141
+  INFO [1a48b97c] Finished in 0.986 seconds with exit status 0 (successful).
+  INFO [01be051a] Running /usr/bin/env ln -s /home/deploy/blog/shared/config/database.yml /home/deploy/blog/releases/20201126134516/config/database.yml as deploy@54.156.57.141
+  INFO [01be051a] Finished in 1.514 seconds with exit status 0 (successful).
+  INFO [712e4cb4] Running /usr/bin/env ln -s /home/deploy/blog/shared/config/application.yml /home/deploy/blog/releases/20201126134516/config/application.yml as deploy@54.156.57.141
+  INFO [712e4cb4] Finished in 0.669 seconds with exit status 0 (successful).
+  INFO [8bb6f82f] Running /usr/bin/env mkdir -p /home/deploy/blog/releases/20201126134516 /home/deploy/blog/releases/20201126134516/tmp /home/deploy/blog/releases/20201126134516/vendor /home/deploy/blog/releases/20201126134516/public as deploy@54.156.57.141
+  INFO [8bb6f82f] Finished in 0.646 seconds with exit status 0 (successful).
+  INFO [ccc18ca6] Running /usr/bin/env rm -rf /home/deploy/blog/releases/20201126134516/bin as deploy@54.156.57.141
+  INFO [ccc18ca6] Finished in 1.113 seconds with exit status 0 (successful).
+  INFO [258736f1] Running /usr/bin/env ln -s /home/deploy/blog/shared/bin /home/deploy/blog/releases/20201126134516/bin as deploy@54.156.57.141
+  INFO [258736f1] Finished in 0.651 seconds with exit status 0 (successful).
+  INFO [57597d0e] Running /usr/bin/env rm -rf /home/deploy/blog/releases/20201126134516/log as deploy@54.156.57.141
+  INFO [57597d0e] Finished in 0.699 seconds with exit status 0 (successful).
+  INFO [50493566] Running /usr/bin/env ln -s /home/deploy/blog/shared/log /home/deploy/blog/releases/20201126134516/log as deploy@54.156.57.141
+  INFO [50493566] Finished in 1.424 seconds with exit status 0 (successful).
+  INFO [5af45526] Running /usr/bin/env ln -s /home/deploy/blog/shared/tmp/pids /home/deploy/blog/releases/20201126134516/tmp/pids as deploy@54.156.57.141
+  INFO [5af45526] Finished in 1.052 seconds with exit status 0 (successful).
+  INFO [1444f036] Running /usr/bin/env rm -rf /home/deploy/blog/releases/20201126134516/tmp/cache as deploy@54.156.57.141
+  INFO [1444f036] Finished in 2.015 seconds with exit status 0 (successful).
+  INFO [c2a0a303] Running /usr/bin/env ln -s /home/deploy/blog/shared/tmp/cache /home/deploy/blog/releases/20201126134516/tmp/cache as deploy@54.156.57.141
+  INFO [c2a0a303] Finished in 1.108 seconds with exit status 0 (successful).
+  INFO [c31eb68c] Running /usr/bin/env ln -s /home/deploy/blog/shared/tmp/sockets /home/deploy/blog/releases/20201126134516/tmp/sockets as deploy@54.156.57.141
+  INFO [c31eb68c] Finished in 1.462 seconds with exit status 0 (successful).
+  INFO [c45b70e8] Running /usr/bin/env ln -s /home/deploy/blog/shared/vendor/bundle /home/deploy/blog/releases/20201126134516/vendor/bundle as deploy@54.156.57.141
+  INFO [c45b70e8] Finished in 1.101 seconds with exit status 0 (successful).
+  INFO [76457cda] Running /usr/bin/env ln -s /home/deploy/blog/shared/public/system /home/deploy/blog/releases/20201126134516/public/system as deploy@54.156.57.141
+  INFO [76457cda] Finished in 1.054 seconds with exit status 0 (successful).
+  INFO [2ba36765] Running /usr/bin/env ln -s /home/deploy/blog/shared/public/uploads /home/deploy/blog/releases/20201126134516/public/uploads as deploy@54.156.57.141
+  INFO [2ba36765] Finished in 1.866 seconds with exit status 0 (successful).
+  INFO [247a28e9] Running /usr/bin/env rm -rf /home/deploy/blog/releases/20201126134516/public/assets as deploy@54.156.57.141
+  INFO [247a28e9] Finished in 0.624 seconds with exit status 0 (successful).
+  INFO [d5781042] Running /usr/bin/env ln -s /home/deploy/blog/shared/public/assets /home/deploy/blog/releases/20201126134516/public/assets as deploy@54.156.57.141
+  INFO [d5781042] Finished in 0.675 seconds with exit status 0 (successful).
+  INFO [dedc680f] Running ~/.rvm/bin/rvm ruby-2.6.5 do bundle config --local deployment true as deploy@54.156.57.141
+  INFO [dedc680f] Finished in 1.410 seconds with exit status 0 (successful).
+  INFO [b643e9a8] Running ~/.rvm/bin/rvm ruby-2.6.5 do bundle config --local path /home/deploy/blog/shared/bundle as deploy@54.156.57.141
+  INFO [b643e9a8] Finished in 1.195 seconds with exit status 0 (successful).
+  INFO [d390a43a] Running ~/.rvm/bin/rvm ruby-2.6.5 do bundle config --local without development:test as deploy@54.156.57.141
+  INFO [d390a43a] Finished in 1.657 seconds with exit status 0 (successful).
+  INFO The Gemfile's dependencies are satisfied, skipping installation
+  INFO [ce021ddf] Running ~/.rvm/bin/rvm ruby-2.6.5 do bundle exec rake assets:precompile as deploy@54.156.57.141
+  INFO [ce021ddf] Finished in 9.231 seconds with exit status 0 (successful).
+  INFO [c8e69c68] Running /usr/bin/env mkdir -p /home/deploy/blog/releases/20201126134516/assets_manifest_backup as deploy@54.156.57.141
+  INFO [c8e69c68] Finished in 2.016 seconds with exit status 0 (successful).
+  INFO [e831455c] Running /usr/bin/env cp /home/deploy/blog/releases/20201126134516/public/assets/.sprockets-manifest-eb65b7ffc4423c5240c2f7d105fedb2d.json /home/deploy/blog/releases/20201126134516/assets_manifest_backup as deploy@54.156.57.141
+  INFO [e831455c] Finished in 0.652 seconds with exit status 0 (successful).
+  INFO [deploy:migrate] Run `rake db:migrate`
+  INFO [5d780e30] Running ~/.rvm/bin/rvm ruby-2.6.5 do bundle exec rake db:migrate as deploy@54.156.57.141
+  INFO [5d780e30] Finished in 2.268 seconds with exit status 0 (successful).
+  INFO [63d939d5] Running /usr/bin/env ln -s /home/deploy/blog/releases/20201126134516 /home/deploy/blog/releases/current as deploy@54.156.57.141
+  INFO [63d939d5] Finished in 0.670 seconds with exit status 0 (successful).
+  INFO [f8ef3ded] Running /usr/bin/env mv /home/deploy/blog/releases/current /home/deploy/blog as deploy@54.156.57.141
+  INFO [f8ef3ded] Finished in 0.642 seconds with exit status 0 (successful).
+  INFO [7a84ea44] Running ~/.rvm/bin/rvm ruby-2.6.5 do bundle exec unicorn -c /home/deploy/blog/current/config/unicorn/production.rb -E deployment -D  as deploy@54.156.57.141
