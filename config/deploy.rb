@@ -1,8 +1,8 @@
 # config valid for current version and patch releases of Capistrano
-lock "~> 3.14.1"
+lock "~> 3.6.0"
 
 set :application, 'blog'
-set :repo_url, 'https://github.com/wilfried04/blog_aws' # Edit this to match your repository
+set :repo_url, 'https://github.com/wilfried04/blog_aws.git' # Edit this to match your repository
 set :branch, :master
 set :deploy_to, '/home/deploy/blog'
 set :pty, true

@@ -2973,3 +2973,15 @@
   INFO [f8ef3ded] Running /usr/bin/env mv /home/deploy/blog/releases/current /home/deploy/blog as deploy@54.156.57.141
   INFO [f8ef3ded] Finished in 0.642 seconds with exit status 0 (successful).
   INFO [7a84ea44] Running ~/.rvm/bin/rvm ruby-2.6.5 do bundle exec unicorn -c /home/deploy/blog/current/config/unicorn/production.rb -E deployment -D  as deploy@54.156.57.141
+  INFO ---------------------------------------------------------------------------
+  INFO START 2020-11-30 09:35:05 +0100 cap production deploy:check
+  INFO ---------------------------------------------------------------------------
+  INFO rbenv: rbenv_ruby is not set; ruby version will be defined by the remote hosts via rbenv
+  INFO [2ca38e2b] Running /usr/bin/env mkdir -p /tmp as app@34.200.194.143
+  INFO [2ca38e2b] Finished in 7.178 seconds with exit status 0 (successful).
+  INFO Uploading /tmp/git-ssh-blog-production-wilromeo.sh 100.0%
+  INFO [5ca2b883] Running /usr/bin/env chmod 700 /tmp/git-ssh-blog-production-wilromeo.sh as app@34.200.194.143
+  INFO [5ca2b883] Finished in 2.354 seconds with exit status 0 (successful).
+  INFO [6c227c7c] Running /usr/bin/env git ls-remote --heads https://github.com/wilfried04/blog_aws.git as app@34.200.194.143
+  INFO [6c227c7c] Finished in 2.458 seconds with exit status 0 (successful).
+  INFO [65076c27] Running /usr/bin/env mkdir -p /home/deploy/blog/shared /home/deploy/blog/releases as app@34.200.194.143
