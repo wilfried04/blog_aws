@@ -82,3 +82,4 @@ production:
   <<: *default
   database: blog_production
   username: blog
+  password: blog
