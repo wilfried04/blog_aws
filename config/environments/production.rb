@@ -3,8 +3,7 @@ Rails.application.configure do
   # Code is not reloaded between requests.
   config.cache_classes = true
 
-  config.secret_key_base = ENV["b4e29d650c66a8be2b806efa81ad261d3fd724fd5d3373d9786df97f85dc73a1feaf73fb9d5c940e9bf2c08437bb411564f07d9b4d98b7099497991ed46e96a6
-    "]
+  config.secret_key_base = ENV["SECRET_KEY_BASE"]
 
   config.eager_load = true
 
