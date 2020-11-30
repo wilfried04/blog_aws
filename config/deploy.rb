@@ -2,15 +2,15 @@
 lock "~> 3.6.0"
 
 set :application, 'blog'
-set :repo_url, 'https://github.com/wilfried04/blog_aws.git' # Edit this to match your repository
-set :branch, :master
-set :deploy_to, '/home/deploy/blog'
-set :pty, true
+set :repo_url, 'https://github.com/wilfried04/blog_aws' # Edit this to match your repository
+set :branch,'master'
+set :deploy_to, '/var/www/blog'
+#set :pty, true
 set :linked_files, %w{.env config/database.yml config/application.yml}
-set :linked_dirs, %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system public/uploads}
+set :linked_dirs, %w{log tmp/pids tmp/cache tmp/sockets public/uploads}
 set :keep_releases, 5
-set :rvm_type, :user
-set :rvm_ruby_version, 'ruby-2.6.5' 
+#set :rvm_type, :user
+set :rbenv_ruby, '2.6.5' 
 set :rbenv_type, :system # Edit this if you are using MRI Ruby
 
 set :log_level, :info
@@ -29,12 +29,22 @@ namespace :deploy do
       end
     end
   end
-  after :publishing, :restart
-   after :restart, :clear_cache do
-     on roles(:web), in: :groups, limit: 3, wait: 10 do
-     end
-   end
- end
+#   after :publishing, :restart
+#    after :restart, :clear_cache do
+#      on roles(:web), in: :groups, limit: 3, wait: 10 do
+#      end
+#    end
+#  end
+desc 'Run seed'
+task :seed do
+  on roles(:app) do
+    with rails_env: fetch(:rails_env) do
+      within current_path do
+        execute :bundle, :exec, :rake, 'db:seed'
+      end
+    end
+  end
+end
 
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
@@ -131,16 +141,21 @@ namespace :deploy do
 
 # Default value for keep_releases is 5
 # set :keep_releases, 5
-
-namespace :deploy do
-
+after :publishing, :restart
   after :restart, :clear_cache do
     on roles(:web), in: :groups, limit: 3, wait: 10 do
-      # Here we can do anything such as:
-      # within release_path do
-      #   execute :rake, 'cache:clear'
-      # end
     end
   end
-
 end
+
+# namespace :deploy do
+
+#   after :restart, :clear_cache do
+#     on roles(:web), in: :groups, limit: 3, wait: 10 do
+#       # Here we can do anything such as:
+#       # within release_path do
+#       #   execute :rake, 'cache:clear'
+#       # end
+#     end
+#   end
+# end

@@ -2985,3 +2985,27 @@
   INFO [6c227c7c] Running /usr/bin/env git ls-remote --heads https://github.com/wilfried04/blog_aws.git as app@34.200.194.143
   INFO [6c227c7c] Finished in 2.458 seconds with exit status 0 (successful).
   INFO [65076c27] Running /usr/bin/env mkdir -p /home/deploy/blog/shared /home/deploy/blog/releases as app@34.200.194.143
+  INFO ---------------------------------------------------------------------------
+  INFO START 2020-11-30 09:41:01 +0100 cap production deploy:check
+  INFO ---------------------------------------------------------------------------
+  INFO rbenv: rbenv_ruby is not set; ruby version will be defined by the remote hosts via rbenv
+  INFO [9bddba32] Running /usr/bin/env mkdir -p /tmp as app@34.200.194.143
+  INFO [9bddba32] Finished in 16.797 seconds with exit status 0 (successful).
+  INFO Uploading /tmp/git-ssh-blog-production-wilromeo.sh 100.0%
+  INFO [f131ed23] Running /usr/bin/env chmod 700 /tmp/git-ssh-blog-production-wilromeo.sh as app@34.200.194.143
+  INFO [f131ed23] Finished in 2.526 seconds with exit status 0 (successful).
+  INFO [a7173124] Running /usr/bin/env git ls-remote --heads https://github.com/wilfried04/blog_aws.git as app@34.200.194.143
+  INFO [a7173124] Finished in 1.132 seconds with exit status 0 (successful).
+  INFO [5ebd92aa] Running /usr/bin/env mkdir -p /home/deploy/blog/shared /home/deploy/blog/releases as app@34.200.194.143
+  INFO ---------------------------------------------------------------------------
+  INFO START 2020-11-30 09:45:45 +0100 cap production deploy:check
+  INFO ---------------------------------------------------------------------------
+  INFO rbenv: rbenv_ruby is not set; ruby version will be defined by the remote hosts via rbenv
+  INFO [289b5f1f] Running /usr/bin/env mkdir -p /tmp as app@34.200.194.143
+  INFO [289b5f1f] Finished in 5.957 seconds with exit status 0 (successful).
+  INFO Uploading /tmp/git-ssh-blog-production-wilromeo.sh 100.0%
+  INFO [a7b45228] Running /usr/bin/env chmod 700 /tmp/git-ssh-blog-production-wilromeo.sh as app@34.200.194.143
+  INFO [a7b45228] Finished in 0.742 seconds with exit status 0 (successful).
+  INFO [03784d42] Running /usr/bin/env git ls-remote --heads https://github.com/wilfried04/blog_aws.git as app@34.200.194.143
+  INFO [03784d42] Finished in 0.816 seconds with exit status 0 (successful).
+  INFO [3d79aa52] Running /usr/bin/env mkdir -p /home/deploy/blog/shared /home/deploy/blog/releases as app@34.200.194.143
