@@ -3349,3 +3349,68 @@
   INFO [9e3ce643] Finished in 0.917 seconds with exit status 0 (successful).
   INFO The Gemfile's dependencies are satisfied, skipping installation
   INFO [efde6236] Running /usr/local/rbenv/bin/rbenv exec bundle exec rake assets:precompile as app@34.200.194.143
+  INFO ---------------------------------------------------------------------------
+  INFO START 2020-11-30 11:18:52 +0100 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [4a11ee18] Running /usr/bin/env mkdir -p /tmp as app@34.200.194.143
+  INFO [4a11ee18] Finished in 0.744 seconds with exit status 0 (successful).
+  INFO Uploading /tmp/git-ssh-blog-production-wilromeo.sh 100.0%
+  INFO [1100739c] Running /usr/bin/env chmod 700 /tmp/git-ssh-blog-production-wilromeo.sh as app@34.200.194.143
+  INFO [1100739c] Finished in 0.755 seconds with exit status 0 (successful).
+  INFO [2b67d313] Running /usr/bin/env git ls-remote --heads https://github.com/wilfried04/blog_aws.git as app@34.200.194.143
+  INFO [2b67d313] Finished in 0.839 seconds with exit status 0 (successful).
+  INFO [f671ba86] Running /usr/bin/env mkdir -p /var/www/blog/shared /var/www/blog/releases as app@34.200.194.143
+  INFO [f671ba86] Finished in 0.741 seconds with exit status 0 (successful).
+  INFO [9106fe79] Running /usr/bin/env mkdir -p /var/www/blog/shared/log /var/www/blog/shared/tmp/pids /var/www/blog/shared/tmp/cache /var/www/blog/shared/tmp/sockets /var/www/blog/shared/public/uploads /var/www/blog/shared/public/assets as app@34.200.194.143
+  INFO [9106fe79] Finished in 0.737 seconds with exit status 0 (successful).
+  INFO [a0c6d4c7] Running /usr/bin/env mkdir -p /var/www/blog/shared /var/www/blog/shared/config as app@34.200.194.143
+  INFO [a0c6d4c7] Finished in 0.738 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /var/www/blog/repo
+  INFO [c9fb50c4] Running /usr/bin/env git remote update --prune as app@34.200.194.143
+  INFO [c9fb50c4] Finished in 0.905 seconds with exit status 0 (successful).
+  INFO [da17f33c] Running /usr/bin/env mkdir -p /var/www/blog/releases/20201130101905 as app@34.200.194.143
+  INFO [da17f33c] Finished in 0.747 seconds with exit status 0 (successful).
+  INFO [03be68b0] Running /usr/bin/env git archive master | tar -x -f - -C /var/www/blog/releases/20201130101905 as app@34.200.194.143
+  INFO [03be68b0] Finished in 1.322 seconds with exit status 0 (successful).
+  INFO [e5f2ffe0] Running /usr/bin/env echo "123f3d70d2accfd09d593b0f2d746ac8365b3be8" >> REVISION as app@34.200.194.143
+  INFO [e5f2ffe0] Finished in 0.737 seconds with exit status 0 (successful).
+  INFO [83b92a11] Running /usr/bin/env mkdir -p /var/www/blog/releases/20201130101905 /var/www/blog/releases/20201130101905/config as app@34.200.194.143
+  INFO [83b92a11] Finished in 0.744 seconds with exit status 0 (successful).
+  INFO [7826bcde] Running /usr/bin/env rm /var/www/blog/releases/20201130101905/.env as app@34.200.194.143
+  INFO [7826bcde] Finished in 0.741 seconds with exit status 0 (successful).
+  INFO [4e8483d1] Running /usr/bin/env ln -s /var/www/blog/shared/.env /var/www/blog/releases/20201130101905/.env as app@34.200.194.143
+  INFO [4e8483d1] Finished in 0.780 seconds with exit status 0 (successful).
+  INFO [690e938b] Running /usr/bin/env rm /var/www/blog/releases/20201130101905/config/database.yml as app@34.200.194.143
+  INFO [690e938b] Finished in 0.743 seconds with exit status 0 (successful).
+  INFO [d1175613] Running /usr/bin/env ln -s /var/www/blog/shared/config/database.yml /var/www/blog/releases/20201130101905/config/database.yml as app@34.200.194.143
+  INFO [d1175613] Finished in 0.734 seconds with exit status 0 (successful).
+  INFO [87504ff3] Running /usr/bin/env ln -s /var/www/blog/shared/config/application.yml /var/www/blog/releases/20201130101905/config/application.yml as app@34.200.194.143
+  INFO [87504ff3] Finished in 0.744 seconds with exit status 0 (successful).
+  INFO [7f1c9d1b] Running /usr/bin/env mkdir -p /var/www/blog/releases/20201130101905 /var/www/blog/releases/20201130101905/tmp /var/www/blog/releases/20201130101905/public as app@34.200.194.143
+  INFO [7f1c9d1b] Finished in 0.730 seconds with exit status 0 (successful).
+  INFO [84e0509f] Running /usr/bin/env rm -rf /var/www/blog/releases/20201130101905/log as app@34.200.194.143
+  INFO [84e0509f] Finished in 0.750 seconds with exit status 0 (successful).
+  INFO [a9e09a86] Running /usr/bin/env ln -s /var/www/blog/shared/log /var/www/blog/releases/20201130101905/log as app@34.200.194.143
+  INFO [a9e09a86] Finished in 0.753 seconds with exit status 0 (successful).
+  INFO [32a77603] Running /usr/bin/env ln -s /var/www/blog/shared/tmp/pids /var/www/blog/releases/20201130101905/tmp/pids as app@34.200.194.143
+  INFO [32a77603] Finished in 0.752 seconds with exit status 0 (successful).
+  INFO [f6a391b3] Running /usr/bin/env rm -rf /var/www/blog/releases/20201130101905/tmp/cache as app@34.200.194.143
+  INFO [f6a391b3] Finished in 0.803 seconds with exit status 0 (successful).
+  INFO [d7a79456] Running /usr/bin/env ln -s /var/www/blog/shared/tmp/cache /var/www/blog/releases/20201130101905/tmp/cache as app@34.200.194.143
+  INFO [d7a79456] Finished in 0.543 seconds with exit status 0 (successful).
+  INFO [ca3d0d02] Running /usr/bin/env ln -s /var/www/blog/shared/tmp/sockets /var/www/blog/releases/20201130101905/tmp/sockets as app@34.200.194.143
+  INFO [ca3d0d02] Finished in 0.754 seconds with exit status 0 (successful).
+  INFO [44431384] Running /usr/bin/env ln -s /var/www/blog/shared/public/uploads /var/www/blog/releases/20201130101905/public/uploads as app@34.200.194.143
+  INFO [44431384] Finished in 0.750 seconds with exit status 0 (successful).
+  INFO [c2d75073] Running /usr/bin/env rm -rf /var/www/blog/releases/20201130101905/public/assets as app@34.200.194.143
+  INFO [c2d75073] Finished in 0.564 seconds with exit status 0 (successful).
+  INFO [6839cdec] Running /usr/bin/env ln -s /var/www/blog/shared/public/assets /var/www/blog/releases/20201130101905/public/assets as app@34.200.194.143
+  INFO [6839cdec] Finished in 0.752 seconds with exit status 0 (successful).
+  INFO [f3103e8f] Running /usr/local/rbenv/bin/rbenv exec bundle config --local deployment true as app@34.200.194.143
+  INFO [f3103e8f] Finished in 0.940 seconds with exit status 0 (successful).
+  INFO [5632b128] Running /usr/local/rbenv/bin/rbenv exec bundle config --local path /var/www/blog/shared/bundle as app@34.200.194.143
+  INFO [5632b128] Finished in 0.937 seconds with exit status 0 (successful).
+  INFO [dcef5545] Running /usr/local/rbenv/bin/rbenv exec bundle config --local without development:test as app@34.200.194.143
+  INFO [dcef5545] Finished in 0.936 seconds with exit status 0 (successful).
+  INFO The Gemfile's dependencies are satisfied, skipping installation
+  INFO [1bcfb50f] Running /usr/local/rbenv/bin/rbenv exec bundle exec rake assets:precompile as app@34.200.194.143
