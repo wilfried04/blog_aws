@@ -3009,3 +3009,130 @@
   INFO [03784d42] Running /usr/bin/env git ls-remote --heads https://github.com/wilfried04/blog_aws.git as app@34.200.194.143
   INFO [03784d42] Finished in 0.816 seconds with exit status 0 (successful).
   INFO [3d79aa52] Running /usr/bin/env mkdir -p /home/deploy/blog/shared /home/deploy/blog/releases as app@34.200.194.143
+  INFO ---------------------------------------------------------------------------
+  INFO START 2020-11-30 10:13:27 +0100 cap production deploy:check
+  INFO ---------------------------------------------------------------------------
+  INFO [ce7b5333] Running /usr/bin/env mkdir -p /tmp as app@34.200.194.143
+  INFO [ce7b5333] Finished in 0.747 seconds with exit status 0 (successful).
+  INFO Uploading /tmp/git-ssh-blog-production-wilromeo.sh 100.0%
+  INFO [eafb7359] Running /usr/bin/env chmod 700 /tmp/git-ssh-blog-production-wilromeo.sh as app@34.200.194.143
+  INFO [eafb7359] Finished in 0.751 seconds with exit status 0 (successful).
+  INFO [d78001d9] Running /usr/bin/env git ls-remote --heads https://github.com/wilfried04/blog_aws as app@34.200.194.143
+  INFO [d78001d9] Finished in 0.836 seconds with exit status 0 (successful).
+  INFO [2d60cd59] Running /usr/bin/env mkdir -p /var/www/blog/shared /var/www/blog/releases as app@34.200.194.143
+  INFO [2d60cd59] Finished in 0.749 seconds with exit status 0 (successful).
+  INFO [c611bdba] Running /usr/bin/env mkdir -p /var/www/blog/shared/log /var/www/blog/shared/tmp/pids /var/www/blog/shared/tmp/cache /var/www/blog/shared/tmp/sockets /var/www/blog/shared/public/uploads /var/www/blog/shared/public/assets as app@34.200.194.143
+  INFO [c611bdba] Finished in 0.747 seconds with exit status 0 (successful).
+  INFO [60317d6b] Running /usr/bin/env mkdir -p /var/www/blog/shared /var/www/blog/shared/config as app@34.200.194.143
+  INFO [60317d6b] Finished in 0.738 seconds with exit status 0 (successful).
+ ERROR linked file /var/www/blog/shared/.env does not exist on 34.200.194.143
+  INFO ---------------------------------------------------------------------------
+  INFO START 2020-11-30 10:25:16 +0100 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [dacc702c] Running /usr/bin/env mkdir -p /tmp as app@34.200.194.143
+  INFO [dacc702c] Finished in 0.720 seconds with exit status 0 (successful).
+  INFO Uploading /tmp/git-ssh-blog-production-wilromeo.sh 100.0%
+  INFO [f42ecf77] Running /usr/bin/env chmod 700 /tmp/git-ssh-blog-production-wilromeo.sh as app@34.200.194.143
+  INFO [f42ecf77] Finished in 0.722 seconds with exit status 0 (successful).
+  INFO [a2f7c5b6] Running /usr/bin/env git ls-remote --heads https://github.com/wilfried04/blog_aws as app@34.200.194.143
+  INFO [a2f7c5b6] Finished in 0.826 seconds with exit status 0 (successful).
+  INFO [15bad68a] Running /usr/bin/env mkdir -p /var/www/blog/shared /var/www/blog/releases as app@34.200.194.143
+  INFO [15bad68a] Finished in 0.730 seconds with exit status 0 (successful).
+  INFO [74974814] Running /usr/bin/env mkdir -p /var/www/blog/shared/log /var/www/blog/shared/tmp/pids /var/www/blog/shared/tmp/cache /var/www/blog/shared/tmp/sockets /var/www/blog/shared/public/uploads /var/www/blog/shared/public/assets as app@34.200.194.143
+  INFO [74974814] Finished in 0.728 seconds with exit status 0 (successful).
+  INFO [ae263039] Running /usr/bin/env mkdir -p /var/www/blog/shared /var/www/blog/shared/config as app@34.200.194.143
+  INFO [ae263039] Finished in 0.728 seconds with exit status 0 (successful).
+ ERROR linked file /var/www/blog/shared/.env does not exist on 34.200.194.143
+  INFO ---------------------------------------------------------------------------
+  INFO START 2020-11-30 10:26:14 +0100 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [2cacea8a] Running /usr/bin/env mkdir -p /tmp as app@34.200.194.143
+  INFO [2cacea8a] Finished in 0.728 seconds with exit status 0 (successful).
+  INFO Uploading /tmp/git-ssh-blog-production-wilromeo.sh 100.0%
+  INFO [60b57139] Running /usr/bin/env chmod 700 /tmp/git-ssh-blog-production-wilromeo.sh as app@34.200.194.143
+  INFO [60b57139] Finished in 0.743 seconds with exit status 0 (successful).
+  INFO [46a5aa9c] Running /usr/bin/env git ls-remote --heads https://github.com/wilfried04/blog_aws as app@34.200.194.143
+  INFO [46a5aa9c] Finished in 0.812 seconds with exit status 0 (successful).
+  INFO [3714b722] Running /usr/bin/env mkdir -p /var/www/blog/shared /var/www/blog/releases as app@34.200.194.143
+  INFO [3714b722] Finished in 0.742 seconds with exit status 0 (successful).
+  INFO [62955120] Running /usr/bin/env mkdir -p /var/www/blog/shared/log /var/www/blog/shared/tmp/pids /var/www/blog/shared/tmp/cache /var/www/blog/shared/tmp/sockets /var/www/blog/shared/public/uploads /var/www/blog/shared/public/assets as app@34.200.194.143
+  INFO [62955120] Finished in 0.735 seconds with exit status 0 (successful).
+  INFO [d4a0bb8b] Running /usr/bin/env mkdir -p /var/www/blog/shared /var/www/blog/shared/config as app@34.200.194.143
+  INFO [d4a0bb8b] Finished in 0.774 seconds with exit status 0 (successful).
+ ERROR linked file /var/www/blog/shared/config/database.yml does not exist on 34.200.194.143
+  INFO ---------------------------------------------------------------------------
+  INFO START 2020-11-30 10:27:53 +0100 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [c816a37a] Running /usr/bin/env mkdir -p /tmp as app@34.200.194.143
+  INFO [c816a37a] Finished in 0.725 seconds with exit status 0 (successful).
+  INFO Uploading /tmp/git-ssh-blog-production-wilromeo.sh 100.0%
+  INFO [cd37fd1a] Running /usr/bin/env chmod 700 /tmp/git-ssh-blog-production-wilromeo.sh as app@34.200.194.143
+  INFO [cd37fd1a] Finished in 0.729 seconds with exit status 0 (successful).
+  INFO [edb21d4a] Running /usr/bin/env git ls-remote --heads https://github.com/wilfried04/blog_aws as app@34.200.194.143
+  INFO [edb21d4a] Finished in 0.798 seconds with exit status 0 (successful).
+  INFO [0ed0554a] Running /usr/bin/env mkdir -p /var/www/blog/shared /var/www/blog/releases as app@34.200.194.143
+  INFO [0ed0554a] Finished in 0.733 seconds with exit status 0 (successful).
+  INFO [e667787e] Running /usr/bin/env mkdir -p /var/www/blog/shared/log /var/www/blog/shared/tmp/pids /var/www/blog/shared/tmp/cache /var/www/blog/shared/tmp/sockets /var/www/blog/shared/public/uploads /var/www/blog/shared/public/assets as app@34.200.194.143
+  INFO [e667787e] Finished in 0.728 seconds with exit status 0 (successful).
+  INFO [993bda97] Running /usr/bin/env mkdir -p /var/www/blog/shared /var/www/blog/shared/config as app@34.200.194.143
+  INFO [993bda97] Finished in 0.741 seconds with exit status 0 (successful).
+ ERROR linked file /var/www/blog/shared/config/application.yml does not exist on 34.200.194.143
+  INFO ---------------------------------------------------------------------------
+  INFO START 2020-11-30 10:33:27 +0100 cap production deploy:check
+  INFO ---------------------------------------------------------------------------
+  INFO [29ea7036] Running /usr/bin/env mkdir -p /tmp as app@34.200.194.143
+  INFO [29ea7036] Finished in 0.724 seconds with exit status 0 (successful).
+  INFO Uploading /tmp/git-ssh-blog-production-wilromeo.sh 100.0%
+  INFO [9bb83616] Running /usr/bin/env chmod 700 /tmp/git-ssh-blog-production-wilromeo.sh as app@34.200.194.143
+  INFO [9bb83616] Finished in 0.714 seconds with exit status 0 (successful).
+  INFO [96134608] Running /usr/bin/env git ls-remote --heads https://github.com/wilfried04/blog_aws as app@34.200.194.143
+  INFO [96134608] Finished in 0.784 seconds with exit status 0 (successful).
+  INFO [df5d2954] Running /usr/bin/env mkdir -p /var/www/blog/shared /var/www/blog/releases as app@34.200.194.143
+  INFO [df5d2954] Finished in 0.722 seconds with exit status 0 (successful).
+  INFO [01ccc07e] Running /usr/bin/env mkdir -p /var/www/blog/shared/log /var/www/blog/shared/tmp/pids /var/www/blog/shared/tmp/cache /var/www/blog/shared/tmp/sockets /var/www/blog/shared/public/uploads /var/www/blog/shared/public/assets as app@34.200.194.143
+  INFO [01ccc07e] Finished in 0.717 seconds with exit status 0 (successful).
+  INFO [dd741fee] Running /usr/bin/env mkdir -p /var/www/blog/shared /var/www/blog/shared/config as app@34.200.194.143
+  INFO [dd741fee] Finished in 0.719 seconds with exit status 0 (successful).
+ ERROR linked file /var/www/blog/shared/config/application.yml does not exist on 34.200.194.143
+  INFO ---------------------------------------------------------------------------
+  INFO START 2020-11-30 10:36:55 +0100 cap production deploy:check
+  INFO ---------------------------------------------------------------------------
+  INFO ---------------------------------------------------------------------------
+  INFO START 2020-11-30 10:37:39 +0100 cap production deploy:check
+  INFO ---------------------------------------------------------------------------
+  INFO ---------------------------------------------------------------------------
+  INFO START 2020-11-30 10:40:14 +0100 cap production deploy:check
+  INFO ---------------------------------------------------------------------------
+  INFO ---------------------------------------------------------------------------
+  INFO START 2020-11-30 10:45:34 +0100 cap production deploy:check
+  INFO ---------------------------------------------------------------------------
+  INFO [ea101bcf] Running /usr/bin/env mkdir -p /tmp as app@34.200.194.143
+  INFO [ea101bcf] Finished in 0.718 seconds with exit status 0 (successful).
+  INFO Uploading /tmp/git-ssh-blog-production-wilromeo.sh 100.0%
+  INFO [e5fc8432] Running /usr/bin/env chmod 700 /tmp/git-ssh-blog-production-wilromeo.sh as app@34.200.194.143
+  INFO [e5fc8432] Finished in 0.727 seconds with exit status 0 (successful).
+  INFO [429a82a5] Running /usr/bin/env git ls-remote --heads https://github.com/wilfried04/blog_aws.git as app@34.200.194.143
+  INFO [429a82a5] Finished in 0.795 seconds with exit status 0 (successful).
+  INFO [01590ec2] Running /usr/bin/env mkdir -p /var/www/blog/shared /var/www/blog/releases as app@34.200.194.143
+  INFO [01590ec2] Finished in 0.720 seconds with exit status 0 (successful).
+  INFO [24cfbeda] Running /usr/bin/env mkdir -p /var/www/blog/shared/log /var/www/blog/shared/tmp/pids /var/www/blog/shared/tmp/cache /var/www/blog/shared/tmp/sockets /var/www/blog/shared/public/uploads /var/www/blog/shared/public/assets as app@34.200.194.143
+  INFO [24cfbeda] Finished in 0.733 seconds with exit status 0 (successful).
+  INFO [addcf1b3] Running /usr/bin/env mkdir -p /var/www/blog/shared /var/www/blog/shared/config as app@34.200.194.143
+  INFO [addcf1b3] Finished in 0.720 seconds with exit status 0 (successful).
+ ERROR linked file /var/www/blog/shared/config/application.yml does not exist on 34.200.194.143
+  INFO ---------------------------------------------------------------------------
+  INFO START 2020-11-30 10:46:20 +0100 cap production deploy:check
+  INFO ---------------------------------------------------------------------------
+  INFO [ac29d475] Running /usr/bin/env mkdir -p /tmp as app@34.200.194.143
+  INFO [ac29d475] Finished in 0.720 seconds with exit status 0 (successful).
+  INFO Uploading /tmp/git-ssh-blog-production-wilromeo.sh 100.0%
+  INFO [f5a0d969] Running /usr/bin/env chmod 700 /tmp/git-ssh-blog-production-wilromeo.sh as app@34.200.194.143
+  INFO [f5a0d969] Finished in 0.726 seconds with exit status 0 (successful).
+  INFO [6f80de8b] Running /usr/bin/env git ls-remote --heads https://github.com/wilfried04/blog_aws.git as app@34.200.194.143
+  INFO [6f80de8b] Finished in 0.830 seconds with exit status 0 (successful).
+  INFO [44fcbeeb] Running /usr/bin/env mkdir -p /var/www/blog/shared /var/www/blog/releases as app@34.200.194.143
+  INFO [44fcbeeb] Finished in 0.733 seconds with exit status 0 (successful).
+  INFO [09df80a3] Running /usr/bin/env mkdir -p /var/www/blog/shared/log /var/www/blog/shared/tmp/pids /var/www/blog/shared/tmp/cache /var/www/blog/shared/tmp/sockets /var/www/blog/shared/public/uploads /var/www/blog/shared/public/assets as app@34.200.194.143
+  INFO [09df80a3] Finished in 0.713 seconds with exit status 0 (successful).
+  INFO [46a881d6] Running /usr/bin/env mkdir -p /var/www/blog/shared /var/www/blog/shared/config as app@34.200.194.143
+  INFO [46a881d6] Finished in 0.729 seconds with exit status 0 (successful).

@@ -2,7 +2,7 @@
 lock "~> 3.6.0"
 
 set :application, 'blog'
-set :repo_url, 'https://github.com/wilfried04/blog_aws' # Edit this to match your repository
+set :repo_url, 'https://github.com/wilfried04/blog_aws.git' # Edit this to match your repository
 set :branch,'master'
 set :deploy_to, '/var/www/blog'
 #set :pty, true
